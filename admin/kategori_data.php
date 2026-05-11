@@ -60,7 +60,7 @@
                 <tbody>
                     <?php
                         $no = 1;
-                        $kategori = mysqli_query($conn, "SELECT * FROM tb_category ORDER BY category_id DESC");
+                        $kategori = mysqli_query($conn, "SELECT * FROM tb_category ORDER BY category_id ASC");
                         if(mysqli_num_rows($kategori) > 0){
                             while($row = mysqli_fetch_array($kategori)){
                     ?>

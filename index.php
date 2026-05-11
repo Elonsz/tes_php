@@ -15,6 +15,7 @@ $a = mysqli_fetch_object($kontak);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -31,12 +32,11 @@ $a = mysqli_fetch_object($kontak);
 
         <nav class="nav-links">
             <a href="index.php">Home</a>
-            <a href="#">About</a>
-            <a href="#">Destination</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="about.php">About</a>
+            <a href="destinasi.php">Destination</a>
+            <a href="services.php">Services</a>
+            <a href="contact.php">Contact</a>
         </nav>
-
         <div class="header-right">
             <?php if(isset($_SESSION['status_login']) && $_SESSION['status_login'] == true): ?>
                 <div class="admin-profile-card">
@@ -54,27 +54,25 @@ $a = mysqli_fetch_object($kontak);
 </header>
 
     <!-- Hero Section -->
-    <section class="hero">    
-        <div class="hero-content">
+    <section class="hero">
     <img src="img/hero-bg.png" alt="Hero Background" class="bg-image">
-
-    <div class="overlay">
-      <input type="text" placeholder="SEARCH HERE">
-      <button>Cari Layanan</button>
-    </div>
-  </div>    
-        <div class="container">
-            <div class="hero-content">
-                <span class="hero-subtitle">Eksplorasi Keindahan Dunia</span>
-                <h1>Setiap <span>Perjalanan</span> Adalah Sebuah Cerita</h1>
-                <p>Jadikan liburan Anda lebih bermakna dengan layanan perjalanan eksklusif dan pengalaman tak terlupakan bersama Imperium Travel.</p>
-                <div class="hero-btns">
-                    <button class="btn-primary">Explore Now</button>
-                    <button class="btn-outline">Read More</button>
-                </div>
+    
+    <div class="container">
+        <div class="hero-text-wrapper">
+            <span class="hero-subtitle">TEMUKAN KEAJAIBAN DUNIA</span>
+            <h1>Setiap <span>Perjalanan</span> <br> Adalah Sebuah Cerita</h1>
+            <p>Kami merancang pengalaman perjalanan yang tak terlupakan — dari pantai tropis Indonesia hingga pegunungan bersalju Eropa.</p>
+            <div class="hero-btns">
+                <a href="#" class="btn-primary">JELAJAHI DESTINASI</a>
+                <a href="#" class="btn-outline">TENTANG KAMI</a>
             </div>
         </div>
-    </section>
+        <div class="search-overlay">
+        <input type="text" placeholder="Search Here...">
+        <button>Cari Layanan</button>
+    </div>
+    </div>  
+</section>
 
     <!-- Stats Section -->
     <section class="stats">
