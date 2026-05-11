@@ -77,22 +77,32 @@ $a = mysqli_fetch_object($kontak);
     <!-- Stats Section -->
     <section class="stats">
         <div class="container">
-            <div class="stat-item">
-                <h3>120+</h3>
-                <p>Destinations</p>
-            </div>
-            <div class="stat-item">
-                <h3>5+</h3>
-                <p>Years Experience</p>
-            </div>
-            <div class="stat-item">
-                <h3>15K</h3>
-                <p>Happy Customers</p>
-            </div>
-            <div class="stat-item">
-                <h3>200+</h3>
-                <p>Total Tours</p>
-            </div>
+        <ul>
+            <li>
+                <div class="stat-item">
+                    <h3>120+</h3>
+                    <p>Destinations</p>
+                </div>
+            </li>
+            <li>
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>Years Experience</p>
+                </div>
+            </li>
+            <li>
+                <div class="stat-item">
+                    <h3>15K</h3>
+                    <p>Happy Customers</p>
+                </div>
+            </li>
+            <li>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>Total Tours</p>
+                </div>
+            </li>
+            </ul>
         </div>
     </section>
 
@@ -100,13 +110,12 @@ $a = mysqli_fetch_object($kontak);
     <section class="about">
         <div class="container">
             <div class="about-img">
-                <img src="img/about.jpg" alt="About Imperium Travel" style="background: #ccc; height: 400px; object-fit: cover;">
+                <img src="img/ft1.png" alt="About Imperium Travel">
             </div>
             <div class="about-content">
-                <span class="section-tag">About Us</span>
                 <h2>Berpengalaman Membawa Anda ke Seluruh Penjuru Dunia</h2>
-                <p>Imperium Travel adalah agen perjalanan terpercaya yang telah membantu ribuan wisatawan mewujudkan liburan impian mereka. Kami menyediakan paket tour eksklusif dengan fasilitas premium untuk memastikan kenyamanan Anda.</p>
-                <a href="About.php" class="read-more">Read More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <p>Imperium Travel berdiri sejak 2012, lahir dari kecintaan mendalam terhadap keindahan bumi. Kami percaya bahwa setiap perjalanan bukan sekadar berpindah tempat, melainkan pengalaman transformatif yang mengubah cara kita memandang dunia.</p>
+                <a href="About.php" class="read-more">SELENGKAPNYA<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
         </div>
     </section>
