@@ -154,8 +154,8 @@ $a = mysqli_fetch_object($kontak);
             <div class="steps-grid">
                 <div class="step-item">
                     <div class="step-number">1</div>
-                    <h4>Pilih Destinasi</h4>
-                    <p>Eksplorasi dan temukan tujuan impian Anda.</p>
+                    <h4>Free Consult</h4>
+                    <p>Tell our team of specialists about your destination dreams.</p>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
