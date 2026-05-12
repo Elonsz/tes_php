@@ -1,16 +1,24 @@
-<?php include ('session.php');?>
+<?php include('session.php'); ?>
+<?php
+    $kategori = mysqli_query($conn, "SELECT * FROM tb_category WHERE category_id = '".$_GET['id']."' ");
+    if(mysqli_num_rows($kategori) == 0){
+        echo '<script>window.location="kategori_data.php"</script>';
+    }
+    $k = mysqli_fetch_object($kategori);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Kategori Data - Imperium Travel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Kategori - Imperium Travel Admin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/admin.css">
 </head>
 <body>
+
     <div class="sidebar">
         <div class="sidebar-header">
             <div class="logo-circle">
@@ -29,62 +37,51 @@
     <div class="main-content">
         <div class="header-top">
             <div class="greeting">
-                <h1>Data Kategori</h1>
-                <p>Kelola kategori destinasi wisata</p>
+                <h1>Edit Kategori</h1>
+                <p>Ubah informasi kategori destinasi wisata</p>
             </div>
             <div class="profile-area">
                 <div class="profile-info">
-                    <div class="profile-name"><?php echo isset($user_row['admin_name']) ? $user_row['admin_name'] : 'Administrator'; ?></div>
+                    <div class="profile-name"><?php echo $user_row['admin_name']; ?></div>
                     <div class="profile-role">Admin Access</div>
                 </div>
                 <div class="profile-avatar">
-                    <?php echo isset($user_row['admin_name']) ? substr($user_row['admin_name'], 0, 1) : 'A'; ?>
+                    <?php echo substr($user_row['admin_name'], 0, 1); ?>
                 </div>
             </div>
         </div>
 
-        <div class="card-table-container">
-            <div class="header-action">
-                <h5 class="card-title" style="margin-bottom: 0; font-size: 18px; color: var(--text-light); font-weight: 600;">Daftar Kategori</h5>
-                <a href="kategori_tambah.php" class="btn-primary">Tambah Data</a>
-            </div>
-            
-            <table class="table1">
-                <thead>
-                    <tr>
-                        <th width="10%">No</th>
-                        <th width="70%">Kategori</th>
-                        <th width="20%">Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                        $no = 1;
-                        $kategori = mysqli_query($conn, "SELECT * FROM tb_category ORDER BY category_id DESC");
-                        if(mysqli_num_rows($kategori) > 0){
-                            while($row = mysqli_fetch_array($kategori)){
-                    ?>
-                    <tr>
-                        <td><?php echo $no++ ?></td>
-                        <td><?php echo $row['category_name'] ?></td>
-                        <td>
-                            <div class="action-links">
-                                <a href="kategori_edit.php?id=<?php echo $row['category_id'] ?>" class="btn-edit">Edit</a> 
-                                <span style="color: var(--border);">|</span>
-                                <a href="hapus_proses.php?idk=<?php echo $row['category_id'] ?>" class="btn-delete" onclick="return confirm('Yakin ingin hapus ?')">Hapus</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <?php
-                            }
-                        }else{ ?>
-                    <tr>
-                        <td colspan="3" style="text-align: center;">Tidak ada data</td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+        <div class="form-card">
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label>Nama Kategori</label>
+                    <input type="text" name="nama" placeholder="Nama Kategori" class="form-control" value="<?php echo $k->category_name ?>" required>
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <input type="submit" name="submit" value="Simpan Perubahan" class="btn-primary">
+                    <a href="kategori_data.php" class="btn-primary" style="background-color: transparent; border: 1px solid var(--border); color: var(--text-muted);">Batal</a>
+                </div>
+            </form>
+
+            <?php
+                if(isset($_POST['submit'])){
+                    $nama = ucwords($_POST['nama']);
+
+                    $update = mysqli_query($conn, "UPDATE tb_category SET 
+                                            category_name = '".$nama."'
+                                            WHERE category_id = '".$k->category_id."' ");
+
+                    if($update){
+                        echo '<script>alert("Edit data berhasil")</script>';
+                        echo '<script>window.location="kategori_data.php"</script>';
+                    }else{
+                        echo 'gagal '.mysqli_error($conn);
+                    }
+                }
+            ?>
         </div>
     </div>
+
 </body>
 </html>

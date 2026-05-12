@@ -446,13 +446,13 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  top:20px;
+  top: 20px;
   text-align: center;
   align-items: center;
   background-color: #F5EDE0;
   color: #000000;
   padding: 70px;
-  font-family:'Cormorant Garamond';
+  font-family: 'Cormorant Garamond';
 }
 
 .steps-grid {
@@ -466,7 +466,7 @@ header {
   text-align: center;
   display: flex;
   justify-content: center;
- margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .step-number {
@@ -497,7 +497,430 @@ header {
 }
 
 .step-item h4 {
-  margin-bottom:10px;
-  color:#6B4226;
+  margin-bottom: 10px;
+  color: #6B4226;
 }
 
+.destinations,
+.tours {
+  background-color: #F5EDE0;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+/* tours uses the global .container class from index.php */
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.section-tag {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #C8956C;
+  margin-bottom: 12px;
+}
+
+.section-title h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  color: #6B4226;
+  font-weight: 500;
+  margin: 0;
+}
+
+.read-more {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #6B4226;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.destination-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 40px 30px 40px;
+  margin: 0 -40px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.destination-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.destination-grid .dest-card {
+  min-width:500px;
+  flex-shrink: 0;
+}
+
+.dest-card {
+  position: relative;
+  min-width: 400px;
+  width: 400px;
+  height: 350px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.dest-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.dest-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.dest-card:hover img {
+  transform: scale(1.05);
+}
+
+.dest-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  color: #fff;
+  z-index: 2;
+}
+
+.dest-info span {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #C8956C;
+  margin-bottom: 5px;
+}
+
+.dest-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0;
+}
+
+
+/* Removed duplicate definition to fix alignment */
+
+.destinations .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow: visible;
+}
+
+
+.tours {
+  background-color: #F5EDE0;
+}
+
+.tour-grid {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 10px 40px 30px 40px;
+  margin: 0 -40px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tour-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.tour-grid .tour-card {
+  min-width: 400px;
+}
+
+
+.tour-card {
+  background: #fff;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.tour-img {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.tour-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tour-card:hover .tour-img img {
+  transform: scale(1.1);
+}
+
+.tour-tag {
+  display: inline-block;
+  background: #F5EDE0;
+  color: #6B4226;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  width: fit-content;
+  border: 1px solid #E8DDD0;
+}
+
+.tour-content {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-content h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  color: #6B4226;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.tour-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: #A09892;
+  font-size: 12px;
+}
+
+.tour-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tour-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  margin-top: auto;
+}
+
+.tour-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #E07B39;
+  opacity: 0.8;
+}
+
+.tour-price span {
+  font-size: 12px;
+  color: #A09892;
+  font-weight: 400;
+}
+
+.btn-pesan {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #6B4226;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 1024px) {
+  .tour-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tour-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- SECTION TESTIMONIALS --- */
+.testimonials {
+  background-color: #6B4226; /* Warna latar cokelat gelap */
+  padding: 100px 0; /* Bikin jarak atas-bawah seimbang dan clean */
+  color: #ffffff;
+  text-align: center; /* Otomatis memusatkan tulisan .section-tag dan h2 */
+}
+
+.testimonials .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+
+.testimonials .section-tag {
+  color: #C8956C;
+  letter-spacing: 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.testimonials h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.testi-grid {
+  display: flex;
+  justify-content: center; 
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0; 
+}
+
+.testi-card {
+  border: 1px solid rgba(200, 149, 108, 0.3);
+  background-color: rgba(253, 250, 246, 0.05);
+  width: 350px; 
+  padding: 40px 30px;
+  text-align: left; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testi-card .stars {
+  color: #C8956C;
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.testi-card p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+
+.testi-author h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+.newsletter {
+  background-color: #E07B39; 
+  padding: 60px 0; 
+  margin: 0;
+}
+
+.newsletter .container {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px; 
+}
+
+
+.newsletter-text {
+  color: #fff;
+}
+
+.newsletter-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.newsletter-text p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+
+.newsletter-form {
+  display: flex; 
+  align-items: center;
+  margin-left: 0; 
+}
+
+.newsletter-form input {
+  height: 48px; 
+  width: 320px; 
+  border: none;
+  padding: 0 20px;
+  background-color: rgba(253, 250, 246, 0.2);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(245, 237, 224, 0.5); 
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  background-color: rgba(253, 250, 246, 0.3); 
+}
+
+.newsletter-form button {
+  height: 48px; 
+  background-color: #6B4226;
+  color: #fff;
+  border: none;
+  padding: 0 25px; 
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase; 
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.newsletter-form button:hover {
+  background-color: #482d1b;
+  transform: translateX(3px);
+}

@@ -181,32 +181,53 @@ $a = mysqli_fetch_object($kontak);
         <div class="container">
             <div class="section-title">
                 <div>
-                    <span class="section-tag">Destinations</span>
+                    <span class="section-tag">DESTINASI PILIHAN</span>
                     <h2>Tempat-Tempat Impian</h2>
                 </div>
-                <a href="Destination.php" class="read-more">See All Destinations <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="Destination.php" class="read-more">LIHAT SEMUA <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
             
             <div class="destination-grid">
                 <div class="dest-card">
-                    <img src="img/bali.jpg" alt="Bali" style="background: #ccc;">
+                    <img src="produk/bali.png" alt="Bali" style="background: #ccc;">
                     <div class="dest-info">
-                        <span>Indonesia</span>
+                        <span>INDONESIA</span>
                         <h3>Bali</h3>
                     </div>
                 </div>
                 <div class="dest-card">
-                    <img src="img/santorini.jpg" alt="Santorini" style="background: #ccc;">
+                    <img src="produk/santorini.png" alt="Santorini" style="background: #ccc;">
                     <div class="dest-info">
-                        <span>Greece</span>
+                        <span>YUNANI</span>
                         <h3>Santorini</h3>
                     </div>
                 </div>
                 <div class="dest-card">
-                    <img src="img/kyoto.jpg" alt="Kyoto" style="background: #ccc;">
+                    <img src="produk/kyoto.png" alt="Kyoto" style="background: #ccc;">
                     <div class="dest-info">
-                        <span>Japan</span>
+                        <span>JEPANG</span>
                         <h3>Kyoto</h3>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <img src="produk/roma.png" alt="Roma" style="background: #ccc;">
+                    <div class="dest-info">
+                        <span>ITALI</span>
+                        <h3>Roma</h3>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <img src="produk/kl.png" alt="Kuala Lumpur" style="background: #ccc;">
+                    <div class="dest-info">
+                        <span>MALAYSIA</span>
+                        <h3>Kuala Lumpur</h3>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <img src="produk/manilla.png" alt="Manila" style="background: #ccc;">
+                    <div class="dest-info">
+                        <span>PHILIPPINE</span>
+                        <h3>Manila</h3>
                     </div>
                 </div>
             </div>
@@ -227,27 +248,37 @@ $a = mysqli_fetch_object($kontak);
             <div class="tour-grid">
                 <?php
                 ini_set('error_reporting', 0);
-                $produk = mysqli_query($conn, "SELECT * FROM tb_product WHERE product_status = 1 ORDER BY product_id DESC LIMIT 3");
+                $produk = mysqli_query($conn, "SELECT * FROM tb_product LEFT JOIN tb_category USING (category_id) WHERE product_status = 1 ORDER BY product_id ASC");
 
                 if(mysqli_num_rows($produk) > 0){
                     while($p = mysqli_fetch_array($produk)){
                 ?>
-                <a href="detail_produk.php?id=<?php echo $p['product_id'] ?>" class="tour-card">
+                <a href="destination.php?id=<?php echo $p['product_id'] ?>" class="tour-card">
                     <div class="tour-img">
                         <img src="produk/<?php echo $p['product_image'] ?>" alt="<?php echo $p['product_name'] ?>">
-                        <div class="tour-tag">Populer</div>
                     </div>
                     <div class="tour-content">
-                        <h3><?php echo substr($p['product_name'], 0, 30) ?></h3>
+                        <div class="tour-tag"><?php echo $p['category_name'] ?></div>
+                        <h3><?php echo substr($p['product_name'], 0, 40) ?></h3>
                         <div class="tour-meta">
-                            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 5 Days</span>
-                            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Stok <?php echo $p['stok'] ?></span>
+                            <span>4H3M</span>
+                            <span>Min 2 org</span>
+                            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="#F4B400" stroke="none"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.9</span>
                         </div>
                         <div class="tour-footer">
                             <div class="tour-price">
-                                Rp <?php echo number_format($p['product_price']) ?> <span>/ org</span>
+                                <?php 
+                                    $price = $p['product_price'];
+                                    if ($price >= 1000000) {
+                                        $formatted_price = number_format($price / 1000000, 1, ',', '.');
+                                        echo 'Rp ' . $formatted_price . ' Jt';
+                                    } else {
+                                        echo 'Rp ' . number_format($price, 0, ',', '.');
+                                    }
+                                ?>
+                                <span>/orang</span>
                             </div>
-                            <span class="read-more" style="font-size: 10px;">Detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                            <span class="btn-pesan">PESAN <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                         </div>
                     </div>
                 </a>

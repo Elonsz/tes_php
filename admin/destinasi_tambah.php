@@ -123,7 +123,8 @@
                                             '".$deskripsi."',
                                             '".$newname."',
                                             '".$status."',
-                                            null
+                                            null,
+                                            '0'
                                         ) ");
 
                         if ($insert) {
