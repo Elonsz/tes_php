@@ -9,7 +9,7 @@
             or die(mysqli_error($conn));
 
             if (mysqli_num_rows($sql) == 0) {
-                echo "<script>alert('Username / Password Salah')</script>";
+                echo "<script>alert('Incorrect Username / Password')</script>";
                 echo '<script type="text/javascript">window.location="login.php";</script>';
             } else {
                 session_start();
@@ -20,11 +20,11 @@
                 $_SESSION['status_login'] = true;
 
                 if ($row['level'] == 'admin') {
-                    echo "<script>alert('Login Berhasil')</script>";
+                    echo "<script>alert('Login Successful')</script>";
                     echo '<script type="text/javascript">window.location="admin/dashboard.php";</script>';
 
                 } elseif ($row['level'] == 'pelanggan') {
-                    echo "<script>alert('Login Berhasil')</script>";
+                    echo "<script>alert('Login Successful')</script>";
                     echo '<script type="text/javascript">window.location="user/dashboard_user.php";</script>';
                 } else {
                     header('location:index.php');

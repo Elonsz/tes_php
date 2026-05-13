@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Kategori - Imperium Travel Admin</title>
+    <title>Category Data - Imperium Travel Admin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -30,8 +30,8 @@
     <div class="main-content">
         <div class="header-top">
             <div class="greeting">
-                <h1>Kelola Kategori</h1>
-                <p>Manajemen kategori destinasi wisata Imperium Travel</p>
+                <h1>Manage Categories</h1>
+                <p>Management of Imperium Travel destination categories</p>
             </div>
             <div class="profile-area">
                 <div class="profile-info">
@@ -46,16 +46,16 @@
 
         <div class="card-table-container">
             <div class="header-action">
-                <h2 style="font-size: 18px; color: var(--text-light);">Daftar Kategori</h2>
-                <a href="kategori_tambah.php" class="btn-primary" style="padding: 10px 20px; font-size: 13px;">+ Tambah Kategori</a>
+                <h2 style="font-size: 18px; color: var(--text-light);">Category List</h2>
+                <a href="kategori_tambah.php" class="btn-primary" style="padding: 10px 20px; font-size: 13px;">+ Add Category</a>
             </div>
 
             <table class="table1">
                 <thead>
                     <tr>
                         <th width="60px">No</th>
-                        <th>Nama Kategori</th>
-                        <th width="150px">Aksi</th>
+                        <th>Category Name</th>
+                        <th width="150px">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -72,7 +72,7 @@
                             <div class="action-links">
                                 <a href="kategori_edit.php?id=<?php echo $row['category_id'] ?>" class="btn-edit">Edit</a>
                                 <span style="color: var(--border)">|</span>
-                                <a href="hapus_proses.php?idk=<?php echo $row['category_id'] ?>" class="btn-delete" onclick="return confirm('Yakin ingin hapus ?')">Hapus</a>
+                                <a href="hapus_proses.php?idk=<?php echo $row['category_id'] ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -81,7 +81,7 @@
                         } else {
                     ?>
                     <tr>
-                        <td colspan="3" style="text-align: center; padding: 40px; color: var(--text-muted);">Tidak ada data ditemukan</td>
+                        <td colspan="3" style="text-align: center; padding: 40px; color: var(--text-muted);">No data found</td>
                     </tr>
                     <?php } ?>
                 </tbody>

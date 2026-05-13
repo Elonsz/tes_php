@@ -182,7 +182,7 @@ include 'db.php';
                     <span class="section-tag">DESTINATION CHOICES</span>
                     <h2>Dream Destinations</h2>
                 </div>
-                <a href="Destination.php" class="read-more">SEE ALL <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="destinasi.php" class="read-more">SEE ALL <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
             
             <div class="destination-grid">
@@ -240,7 +240,7 @@ include 'db.php';
                     <span class="section-tag">Best Offers</span>
                     <h2>Tourist Favorite Choices</h2>
                 </div>
-                <a href="Destination.php" class="read-more">See All Tours <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="destinasi.php" class="read-more">See All Tours <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
             
             <div class="tour-grid">
@@ -351,7 +351,7 @@ include 'db.php';
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Navigasi</h3>
+                    <h3>Navigation</h3>
                     <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="About.php">About Us</a></li>
@@ -361,7 +361,7 @@ include 'db.php';
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Layanan</h3>
+                    <h3>Our Services</h3>
                     <ul>
                         <li><a href="#">Private Tour</a></li>
                         <li><a href="#">Group Tour</a></li>
@@ -370,7 +370,7 @@ include 'db.php';
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Hubungi Kami</h3>
+                    <h3>Contact Us</h3>
                     <ul class="contact-info">
                         <li>Jl. Ahmad Yani KM 5, Banjarmasin</li>
                         <li>+62 511 123 4567</li>

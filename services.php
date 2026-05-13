@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +30,6 @@
             <a href="services.php">Services</a>
             <a href="contact.php">Contact</a>
         </nav>
+        <div class="header-right"></div>
     </div>
-    
 </header>

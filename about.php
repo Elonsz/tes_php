@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -39,92 +39,92 @@
      <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Tentang <em>Imperium</em> Travel</h1>
+      <h1>About <em>Imperium</em> Travel</h1>
     </div>
 
   </section>
      <div class="search-overlay">
         <input type="text" placeholder="Search Here...">
-        <button>Cari Layanan</button>
+        <button>Search Services</button>
     </div>
  
   <!-- STORY -->
   <section class="story">
     <div class="story-text">
-      <p class="section-eyebrow">Kisah Kami</p>
-      <h2>Lahir dari Kecintaan Terhadap Keindahan Dunia</h2>
-      <p>Imperium Travel didirikan pada tahun 2012 oleh sekelompok pecinta perjalanan yang bermimpi menghidupkan pengalaman wisata terbaik dunia bagi masyarakat Indonesia. Berangkat dari Banjarmasin, kami tumbuh menjadi salah satu biro perjalanan terpercaya di Kalimantan Selatan.</p>
-      <p>Kami selalu menjadi paket wisata, kami merancang setiap perjalanan sebagai pengalaman transformatif — penuh cerita, kenangan, dan koneksi yang bermakna. Karena kami percaya, perjalanan yang baik bukan melulu ke mana yang jauh, tapi tentang apa yang kamu rasakan.</p>
+      <p class="section-eyebrow">Our Story</p>
+      <h2>Born from a Love of the World's Beauty</h2>
+      <p>Imperium Travel was founded in 2012 by a group of travel enthusiasts who dreamed of bringing the world's best travel experiences to the Indonesian people. Starting from Banjarmasin, we have grown into one of the most trusted travel agencies in South Kalimantan.</p>
+      <p>We are more than just tour packages; we design every journey as a transformative experience — full of stories, memories, and meaningful connections. Because we believe a good journey isn't just about how far you go, but about what you feel.</p>
     </div>
     <div class="story-image">
       <img src="Img/about.png" alt="Mountain train" loading="lazy"/>
       <div class="story-badge">
         <span class="num">12+</span>
-        <span class="lbl">Tahun Berpengalaman</span>
+        <span class="lbl">Years of Experience</span>
       </div>
     </div>
   </section>
 
   <!-- VISI MISI -->
   <section class="visi-misi">
-    <p class="section-eyebrow text-center">Nilai Kami</p>
-    <h2>Visi &amp; Misi</h2>
+    <p class="section-eyebrow text-center">Our Values</p>
+    <h2>Vision &amp; Mission</h2>
     <div class="vm-grid">
       <div class="vm-card">
-        <p class="tag">Visi</p>
-        <h3>Menjadi Mitra Perjalanan Terbaik di Asia Tenggara</h3>
-        <p>Kami berkomitmen untuk menghadirkan produk, mengutamakan pengalaman wisata autentik Nusantara, dan membangun kepercayaan yang tak ternilai serta mewujudkan impian pelancong.</p>
+        <p class="tag">Vision</p>
+        <h3>Becoming the Best Travel Partner in Southeast Asia</h3>
+        <p>We are committed to providing products that prioritize authentic Indonesian travel experiences, building invaluable trust, and making travelers' dreams come true.</p>
       </div>
       <div class="vm-card">
-        <p class="tag">Misi</p>
-        <h3>Merancang Perjalanan yang Tak Terlupakan</h3>
-        <p>Menghadirkan layanan perjalanan premium yang personal, kini, dan bermanfaat — dengan dedikasi penuh terhadap kepuasan setiap klien dan kepercayaan tinggi.</p>
+        <p class="tag">Mission</p>
+        <h3>Designing Unforgettable Journeys</h3>
+        <p>Delivering personalized, modern, and beneficial premium travel services — with full dedication to every client's satisfaction and high trust.</p>
       </div>
     </div>
   </section>
 
   <!-- NILAI -->
   <section class="nilai">
-    <p class="section-eyebrow">Nilai Kami</p>
-    <h2>Landasan yang Memandu Kami</h2>
+    <p class="section-eyebrow">Our Values</p>
+    <h2>The Foundation That Guides Us</h2>
     <div class="nilai-grid">
       <div class="nilai-card">
         <div class="nilai-icon">✦</div>
-        <h4>Kepercayaan</h4>
-        <p>Kami membangun hubungan jangka panjang berdasarkan transparansi, kejujuran, dan komitmen nyata terhadap setiap janji yang kami berikan kepada klien.</p>
+        <h4>Trust</h4>
+        <p>We build long-term relationships based on transparency, honesty, and a real commitment to every promise we make to our clients.</p>
       </div>
       <div class="nilai-card">
         <div class="nilai-icon">◈</div>
-        <h4>Keunggulan</h4>
-        <p>Standar kami tidak pernah berhenti pada 'cukup baik'. Kami terus mendorong pengalaman pelayanan yang melampaui ekspektasi.</p>
+        <h4>Excellence</h4>
+        <p>Our standards never stop at 'good enough'. We continue to push for service experiences that exceed expectations.</p>
       </div>
       <div class="nilai-card">
         <div class="nilai-icon">◉</div>
-        <h4>Keberlanjutan</h4>
-        <p>Kami berkomitmen pada praktik perjalanan yang bertanggung jawab — menghormati budaya lokal, mendukung komunitas setempat, dan menjaga kelestarian alam.</p>
+        <h4>Sustainability</h4>
+        <p>We are committed to responsible travel practices — respecting local culture, supporting local communities, and preserving nature.</p>
       </div>
       <div class="nilai-card">
         <div class="nilai-icon">⬡</div>
-        <h4>Inovasi</h4>
-        <p>Kami terus berinovasi dalam merancang pengalaman perjalanan — menghubungkan destinasi baru, layanan digital, dan cara-cara segar dalam menciptakan momen.</p>
+        <h4>Innovation</h4>
+        <p>We continue to innovate in designing travel experiences — connecting new destinations, digital services, and fresh ways of creating moments.</p>
       </div>
       <div class="nilai-card">
         <div class="nilai-icon">❧</div>
         <h4>Passion</h4>
-        <p>Setiap anggota tim kami adalah pecinta perjalanan sejati. Rasa cinta yang sama inilah membuat kami memberikan hati yang tulus dan bersemangat.</p>
+        <p>Every member of our team is a true travel lover. This same love is what drives us to give our hearts sincerely and passionately.</p>
       </div>
       <div class="nilai-card">
         <div class="nilai-icon">⬤</div>
-        <h4>Keamanan</h4>
-        <p>Keselamatan dan kenyamanan Anda adalah prioritas utama kami — dari akomodasi terjamin, pilihan kesehatan, hingga perlindungan sepanjang perjalanan.</p>
+        <h4>Security</h4>
+        <p>Your safety and comfort are our top priorities — from guaranteed accommodation and health options to protection throughout the journey.</p>
       </div>
     </div>
   </section>
 
   <!-- TIM -->
   <section class="tim">
-    <p class="section-eyebrow">Tim Kami</p>
-    <h2>Orang-Orang di Balik Imperium Travel</h2>
+    <p class="section-eyebrow">Our Team</p>
+    <h2>The People Behind Imperium Travel</h2>
     <div class="tim-grid">
       <div class="tim-card">
         <img src="Img/tomholland.png" alt="CEO"/>
@@ -159,15 +159,15 @@
 
   <!-- TIMELINE -->
   <section class="timeline-section">
-    <p class="section-eyebrow">Perjalanan Kami</p>
-    <h2>Tonggak Pencapaian</h2>
+    <p class="section-eyebrow">Our Journey</p>
+    <h2>Milestones</h2>
     <div class="timeline">
 
       <div class="tl-item">
         <div class="tl-content">
           <span class="year">2012</span>
-          <h4>Berdiri di Banjarmasin</h4>
-          <p>Imperium Travel lahir dengan visi menjadi jembatan antara wisatawan dan keajaiban alam Asia Tenggara.</p>
+          <h4>Founded in Banjarmasin</h4>
+          <p>Imperium Travel was born with a vision to be a bridge between travelers and the natural wonders of Southeast Asia.</p>
         </div>
         <div class="tl-dot"></div>
         <div class="tl-empty"></div>
@@ -178,16 +178,16 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <span class="year">2015</span>
-          <h4>Ekspansi Asia</h4>
-          <p>Membuka rute perjalanan ke lebih dari tiga belas destinasi internasional di Asia dan Eropa.</p>
+          <h4>Asia Expansion</h4>
+          <p>Opening travel routes to more than thirteen international destinations in Asia and Europe.</p>
         </div>
       </div>
 
       <div class="tl-item">
         <div class="tl-content">
           <span class="year">2018</span>
-          <h4>Penghargaan ANTA</h4>
-          <p>Meraih penghargaan sebagai Biro Perjalanan Wisata Terbaik Regional Kalimantan.</p>
+          <h4>ANTA Award</h4>
+          <p>Received an award as the Best Travel Agency in the Kalimantan Region.</p>
         </div>
         <div class="tl-dot"></div>
         <div class="tl-empty"></div>
@@ -198,16 +198,16 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <span class="year">2020</span>
-          <h4>Adaptasi Digital</h4>
-          <p>Meluncurkan layanan pemesanan online dan platform digital untuk memudahkan pelanggan.</p>
+          <h4>Digital Adaptation</h4>
+          <p>Launching online booking services and digital platforms to make it easier for customers.</p>
         </div>
       </div>
 
       <div class="tl-item">
         <div class="tl-content">
           <span class="year">2024</span>
-          <h4>15.000+ Wisatawan Puas</h4>
-          <p>Mencapai tonggak melayani lebih dari lima belas ribu wisatawan dari seluruh Indonesia.</p>
+          <h4>15,000+ Satisfied Travelers</h4>
+          <p>Reaching the milestone of serving more than fifteen thousand travelers from all over Indonesia.</p>
         </div>
         <div class="tl-dot"></div>
         <div class="tl-empty"></div>
@@ -218,9 +218,9 @@
 
   <!-- CTA -->
   <section class="cta">
-    <h2>Siap Memulai Petualangan Anda?</h2>
-    <p>Percayakan perjalanan impian Anda kepada kami — dan biarkan kami mewujudkannya menjadi kenangan seumur hidup.</p>
-    <a href="#" class="cta-btn">Hubungi Kami</a>
+    <h2>Ready to Start Your Adventure?</h2>
+    <p>Trust your dream journey to us — and let us turn it into a lifetime memory.</p>
+    <a href="#" class="cta-btn">Contact Us</a>
   </section>
 
     <!-- Footer -->
@@ -239,7 +239,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Navigasi</h3>
+                    <h3>Navigation</h3>
                     <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="About.php">About Us</a></li>
@@ -249,7 +249,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Layanan</h3>
+                    <h3>Services</h3>
                     <ul>
                         <li><a href="#">Private Tour</a></li>
                         <li><a href="#">Group Tour</a></li>
@@ -258,7 +258,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Hubungi Kami</h3>
+                    <h3>Contact Us</h3>
                     <ul class="contact-info">
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-top:4px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>

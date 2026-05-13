@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Destinasi - Imperium Travel</title>
+    <title>Destination Data - Imperium Travel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -30,8 +30,8 @@
     <div class="main-content">
         <div class="header-top">
             <div class="greeting">
-                <h1>Kelola Destinasi</h1>
-                <p>Manajemen data destinasi wisata Imperium Travel</p>
+                <h1>Manage Destinations</h1>
+                <p>Management of Imperium Travel destination data</p>
             </div>
             <div class="profile-area">
                 <div class="profile-info">
@@ -46,20 +46,20 @@
 
         <div class="card-table-container">
             <div class="header-action">
-                <h2 style="font-size: 18px; color: var(--text-light);">Daftar Destinasi</h2>
-                <a href="destinasi_tambah.php" class="btn-primary" style="padding: 10px 20px; font-size: 13px;">+ Tambah Destinasi</a>
+                <h2 style="font-size: 18px; color: var(--text-light);">Destination List</h2>
+                <a href="destinasi_tambah.php" class="btn-primary" style="padding: 10px 20px; font-size: 13px;">+ Add Destination</a>
             </div>
 
             <table class="table1">
                 <thead>
                     <tr>
                         <th width="60px">No</th>
-                        <th>Kategori</th>
-                        <th>Nama Destinasi</th>
-                        <th>Harga</th>
-                        <th width="100px">Gambar</th>
+                        <th>Category</th>
+                        <th>Destination Name</th>
+                        <th>Price</th>
+                        <th width="100px">Image</th>
                         <th width="100px">Status</th>
-                        <th width="150px">Aksi</th>
+                        <th width="150px">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,14 +81,14 @@
                         </td>
                         <td>
                             <span style="padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; background: <?php echo ($row['product_status'] != 0) ? 'rgba(34, 197, 94, 0.1)' : 'rgba(239, 68, 68, 0.1)'; ?>; color: <?php echo ($row['product_status'] != 0) ? '#4ade80' : '#f87171'; ?>;">
-                                <?php echo ($row['product_status'] != 0) ? 'Aktif' : 'Tidak Aktif'; ?>
+                                <?php echo ($row['product_status'] != 0) ? 'Active' : 'Inactive'; ?>
                             </span>
                         </td>
                         <td>
                             <div class="action-links">
                                 <a href="destinasi_edit.php?id=<?php echo $row['product_id'] ?>" class="btn-edit">Edit</a>
                                 <span style="color: var(--border)">|</span>
-                                <a href="hapus_proses.php?idp=<?php echo $row['product_id'] ?>" class="btn-delete" onclick="return confirm('Yakin ingin hapus ?')">Hapus</a>
+                                <a href="hapus_proses.php?idp=<?php echo $row['product_id'] ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -97,7 +97,7 @@
                         } else {
                     ?>
                     <tr>
-                        <td colspan="7" style="text-align: center; padding: 40px; color: var(--text-muted);">Tidak ada data ditemukan</td>
+                        <td colspan="7" style="text-align: center; padding: 40px; color: var(--text-muted);">No data found</td>
                     </tr>
                     <?php } ?>
                 </tbody>

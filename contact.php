@@ -2,7 +2,7 @@
 include 'db.php';
 ?>
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,7 +40,7 @@ include 'db.php';
         <img src="img/Contact.png" alt="Hero Background" class="bg-image">
         <div class="container">
             <div class="hero-text-wrapper">
-                <h1>Mari <span>Berbicara</span><br>Dengan Kami</h1>
+                <h1>Let's <span>Talk</span><br>With Us</h1>
             </div>
             <div class="search-overlay">
                 <input type="text" placeholder="Search Here...">
@@ -56,21 +56,21 @@ include 'db.php';
                 <!-- Left: Contact Info (Dark Panel) -->
                 <div class="contact-info-panel">
                     <div class="panel-content">
-                        <h2 class="panel-title text-white">Kami Siap Mewujudkan Perjalanan Impian Anda</h2>
-                        <p class="panel-subtitle text-light">Hubungi tim kami untuk konsultasi gratis. Kami akan membantu merancang perjalanan yang sempurna sesuai impian dan anggaran Anda.</p>
+                        <h2 class="panel-title text-white">We Are Ready to Make Your Dream Journey Happen</h2>
+                        <p class="panel-subtitle text-light">Contact our team for a free consultation. We will help design the perfect trip according to your dreams and budget.</p>
                         
                         <div class="info-list">
                             <div class="info-item">
                                 <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                                 <div class="info-details">
-                                    <span class="info-label">KANTOR PUSAT</span>
+                                    <span class="info-label">HEADQUARTERS</span>
                                     <p class="info-value">Jl. Ahmad Yani KM 5, No. 22<br>Banjarmasin, Kalimantan Selatan 70249</p>
                                 </div>
                             </div>
                             <div class="info-item">
                                 <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
                                 <div class="info-details">
-                                    <span class="info-label">TELEPON</span>
+                                    <span class="info-label">PHONE</span>
                                     <p class="info-value">+62 511 123 4567<br>+62 511 123 4568</p>
                                 </div>
                             </div>
@@ -91,25 +91,25 @@ include 'db.php';
                         </div>
 
                         <div class="operational-hours">
-                            <h3 class="section-title">Jam Operasional</h3>
+                            <h3 class="section-title">Operational Hours</h3>
                             <div class="hours-grid">
                                 <div class="hours-row">
-                                    <span>Senin - Jumat</span>
+                                    <span>Monday - Friday</span>
                                     <span>08.00 - 17.00 WITA</span>
                                 </div>
                                 <div class="hours-row">
-                                    <span>Sabtu</span>
+                                    <span>Saturday</span>
                                     <span>08.00 - 14.00 WITA</span>
                                 </div>
                                 <div class="hours-row">
-                                    <span>Minggu</span>
-                                    <span>Libur (WA tetap aktif)</span>
+                                    <span>Sunday</span>
+                                    <span>Closed (WhatsApp remains active)</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="social-follow">
-                            <h3 class="section-title">Ikuti Kami</h3>
+                            <h3 class="section-title">Follow Us</h3>
                             <div class="social-icons">
                                 <a href="#"><i class="fab fa-instagram"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -124,17 +124,17 @@ include 'db.php';
                 <!-- Right: Consultation Form (Light Panel) -->
                 <div class="contact-form-panel">
                     <div class="panel-content">
-                        <h2 class="panel-title">Kirim Pesan atau Konsultasi</h2>
-                        <p class="panel-subtitle">Isi formulir di bawah dan tim kami akan menghubungi Anda dalam 1x24 jam.</p>
+                        <h2 class="panel-title">Send a Message or Consultation</h2>
+                        <p class="panel-subtitle">Fill out the form below and our team will contact you within 1x24 hours.</p>
                         
                         <form action="" method="POST" class="consultation-form">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label>NAMA LENGKAP *</label>
-                                    <input type="text" name="nama" placeholder="Nama Anda" required>
+                                    <label>FULL NAME *</label>
+                                    <input type="text" name="nama" placeholder="Your Name" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>NOMOR HP / WHATSAPP *</label>
+                                    <label>PHONE NUMBER / WHATSAPP *</label>
                                     <div class="input-with-prefix">
                                         <input type="text" name="hp" placeholder="+62 812 xxxx xxxx" required>
                                     </div>
@@ -142,41 +142,41 @@ include 'db.php';
                             </div>
                             
                             <div class="form-group">
-                                <label>ALAMAT EMAIL *</label>
-                                <input type="email" name="email" placeholder="nama@email.com" required>
+                                <label>EMAIL ADDRESS *</label>
+                                <input type="email" name="email" placeholder="name@email.com" required>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label>JENIS LAYANAN</label>
+                                    <label>SERVICE TYPE</label>
                                     <select name="layanan">
-                                        <option value="">-- Pilih Layanan --</option>
+                                        <option value="">-- Select Service --</option>
                                         <option value="Private Tour">Private Tour</option>
                                         <option value="Group Tour">Group Tour</option>
                                         <option value="Honeymoon Package">Honeymoon Package</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>RENCANA KEBERANGKATAN</label>
+                                    <label>DEPARTURE PLAN</label>
                                     <input type="date" name="tgl_berangkat">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label>DESTINASI TUJUAN</label>
-                                    <input type="text" name="destinasi" placeholder="Contoh: Bali, Paris, Dubai">
+                                    <label>TARGET DESTINATION</label>
+                                    <input type="text" name="destinasi" placeholder="Example: Bali, Paris, Dubai">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label>PESAN / PERTANYAAN</label>
-                                <textarea name="pesan" placeholder="Ketik Pesan Anda Di sini"></textarea>
+                                <label>MESSAGE / QUESTION</label>
+                                <textarea name="pesan" placeholder="Type Your Message Here"></textarea>
                             </div>
 
-                            <p class="form-note">* Field wajib diisi. Data Anda aman dan tidak akan dibagikan kepada pihak ketiga.</p>
+                            <p class="form-note">* Required fields. Your data is safe and will not be shared with third parties.</p>
                             
-                            <button type="submit" name="submit" class="btn-submit">KIRIM PESAN <i class="fas fa-arrow-right"></i></button>
+                            <button type="submit" name="submit" class="btn-submit">SEND MESSAGE <i class="fas fa-arrow-right"></i></button>
                         </form>
 
                         <?php
@@ -209,9 +209,9 @@ include 'db.php';
                                 )");
 
                                 if($insert){
-                                    echo '<script>alert("Pesan berhasil dikirim!"); window.location="contact.php"</script>';
+                                    echo '<script>alert("Message sent successfully!"); window.location="contact.php"</script>';
                                 } else {
-                                    echo 'Gagal mengirim pesan: '.mysqli_error($conn);
+                                    echo 'Failed to send message: '.mysqli_error($conn);
                                 }
                             }
                         ?>
@@ -238,7 +238,7 @@ include 'db.php';
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Navigasi</h3>
+                    <h3>Navigation</h3>
                     <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About Us</a></li>
@@ -248,7 +248,7 @@ include 'db.php';
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Layanan</h3>
+                    <h3>Services</h3>
                     <ul>
                         <li><a href="#">Private Tour</a></li>
                         <li><a href="#">Group Tour</a></li>
@@ -257,7 +257,7 @@ include 'db.php';
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Hubungi Kami</h3>
+                    <h3>Contact Us</h3>
                     <ul class="contact-info">
                         <li>Jl. Ahmad Yani KM 5, Banjarmasin</li>
                         <li>+62 511 123 4567</li>
