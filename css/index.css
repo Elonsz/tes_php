@@ -953,15 +953,7 @@ footer .container {
   position: relative;
 }
 
-.footer-col h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 30px;
-  height: 1px;
-  background: #E07B39;
-}
+
 
 .footer-col p {
   font-size: 14px;
@@ -1016,18 +1008,13 @@ footer .container {
 }
 
 .contact-info li {
-  display: flex;
-  gap: 15px;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   line-height: 1.6;
-  margin-bottom: 20px !important;
+  margin-bottom: 12px !important;
 }
 
-.contact-info svg {
-  color: #E07B39;
-  flex-shrink: 0;
-}
+
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -1043,3 +1030,4 @@ footer .container {
   margin: 0;
 }
 
+/*SDH SELESE KERJAIN YG ABOUT DLL*/

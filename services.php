@@ -31,4 +31,5 @@
             <a href="contact.php">Contact</a>
         </nav>
     </div>
+    
 </header>

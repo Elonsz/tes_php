@@ -337,7 +337,7 @@
             <div class="banner-content">
                 <h2>Selamat Datang, <span><?php echo isset($user_row['admin_name']) ? $user_row['admin_name'] : 'Admin'; ?></span>!</h2>
                 <p>Anda login sebagai Administrator dari Imperium Travel. Kelola data perjalanan, destinasi, dan pemesanan pelanggan dengan aman dan efisien melalui panel kontrol ini.</p>
-                <a href="#" class="btn-primary">Kelola Destinasi</a>
+                <a href="destinasi_data.php" class="btn-primary">Kelola Destinasi</a>
             </div>
         </div>
 
