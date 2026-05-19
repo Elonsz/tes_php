@@ -30,8 +30,8 @@
     <div class="main-content">
         <div class="header-top">
             <div class="greeting">
-                <h1>Tambah Destinasi Baru</h1>
-                <p>Masukkan informasi destinasi wisata baru</p>
+                <h1>Add New Destination</h1>
+                <p>Enter destination information</p>
             </div>
             <div class="profile-area">
                 <div class="profile-info">
@@ -47,9 +47,9 @@
         <div class="form-card">
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label>Kategori Destinasi</label>
+                    <label>Destination Category</label>
                     <select class="form-control" name="kategori" required>
-                        <option value="">-- Pilih Kategori --</option>
+                        <option value="">-- Select Category --</option>
                         <?php
                             $kategori = mysqli_query($conn, "SELECT * FROM tb_category ORDER BY category_name ASC");
                             while ($r = mysqli_fetch_array($kategori)) {
@@ -60,36 +60,36 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>Nama Destinasi</label>
-                    <input type="text" name="nama" class="form-control" placeholder="Masukkan nama destinasi" required>
+                    <label>Destination Name</label>
+                    <input type="text" name="nama" class="form-control" placeholder="Enter destination name" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Harga (Rp)</label>
-                    <input type="number" name="harga" class="form-control" placeholder="Masukkan harga" required>
+                    <label>Price (Rp)</label>
+                    <input type="number" name="harga" class="form-control" placeholder="Enter price" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Gambar Destinasi</label>
+                    <label>Destination Image</label>
                     <input type="file" name="gambar" class="form-control" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Deskripsi Destinasi</label>
-                    <textarea class="form-control" name="deskripsi" rows="5" placeholder="Masukkan deskripsi lengkap"></textarea>
+                    <label>Destination Description</label>
+                    <textarea class="form-control" name="deskripsi" rows="5" placeholder="Enter full description"></textarea>
                 </div>
 
                 <div class="form-group">
                     <label>Status</label>
                     <select class="form-control" name="status">
-                        <option value="1">Aktif</option>
-                        <option value="0">Tidak Aktif</option>
+                        <option value="1">Active</option>
+                        <option value="0">Inactive</option>
                     </select>
                 </div>
 
                 <div style="display: flex; gap: 10px; margin-top: 30px;">
-                    <button name="submit" type="submit" class="btn-primary">Tambah Destinasi</button>
-                    <a href="destinasi_data.php" class="btn-primary" style="background-color: transparent; border: 1px solid var(--border); color: var(--text-muted);">Batal</a>
+                    <button name="submit" type="submit" class="btn-primary">Add Destination</button>
+                    <a href="destinasi_data.php" class="btn-primary" style="background-color: transparent; border: 1px solid var(--border); color: var(--text-muted);">Cancel</a>
                 </div>
             </form>
 

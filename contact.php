@@ -11,7 +11,7 @@ include 'db.php';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contact.css?v=<?= time() ?>">
 </head>
 <body>
 
@@ -42,10 +42,10 @@ include 'db.php';
             <div class="hero-text-wrapper">
                 <h1>Let's <span>Talk</span><br>With Us</h1>
             </div>
-            <div class="search-overlay">
-                <input type="text" placeholder="Search Here...">
-                <button>Search Services</button>
-            </div>
+            <form class="hero-search" method="get" action="destinasi.php">
+                <input type="text" name="search" placeholder="Search destinations...">
+                <button type="submit">Search</button>
+            </form>
         </div>  
     </section>
 
@@ -266,7 +266,7 @@ include 'db.php';
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Imperium Travel. All Rights Reserved.</p>
+                <p>&copy; <?= date('Y') ?> Imperium Travel. All Rights Reserved.</p>
                 <p>Designed for premium travelers.</p>
             </div>
         </div>

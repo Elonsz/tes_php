@@ -5,7 +5,6 @@
     if(isset($_GET['nama'])){
         $nama = urldecode($_GET['nama']);
         
-        // Deleting by Name since there's no ID column shown in the screenshot
         $delete = mysqli_query($conn, "DELETE FROM tb_contact WHERE `Nama Lengkap` = '".$nama."'");
         
         if($delete){

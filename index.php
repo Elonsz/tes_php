@@ -14,7 +14,7 @@ include 'db.php';
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css?v=<?= time() ?>">
 </head>
 <body>
 
@@ -61,14 +61,14 @@ include 'db.php';
             <h1>Every <span>Journey</span><br> is a Story</h1>
             <p>We create unforgettable travel experiences — from the tropical beaches of Indonesia to the snowy mountains of Europe.</p>
             <div class="hero-btns">
-                <a href="#" class="btn-primary">EXPLORE DESTINATIONS</a>
-                <a href="#" class="btn-outline">ABOUT US</a>
+                <a href="destinasi.php" class="btn-primary">EXPLORE DESTINATIONS</a>
+                <a href="about.php" class="btn-outline">ABOUT US</a>
             </div>
         </div>
-        <div class="search-overlay">
-        <input type="text" placeholder="Search Here...">
-        <button>Search Services</button>
-    </div>
+        <form class="hero-search" method="get" action="destinasi.php">
+            <input type="text" name="search" placeholder="Search destinations...">
+            <button type="submit">Search</button>
+        </form>
     </div>  
 </section>
 
@@ -363,10 +363,10 @@ include 'db.php';
                 <div class="footer-col">
                     <h3>Our Services</h3>
                     <ul>
-                        <li><a href="#">Private Tour</a></li>
-                        <li><a href="#">Group Tour</a></li>
-                        <li><a href="#">Honeymoon Package</a></li>
-                        <li><a href="#">Corporate Trip</a></li>
+                        <li><a href="Services.php">Private Tour</a></li>
+                        <li><a href="Services.php">Group Tour</a></li>
+                        <li><a href="Services.php">Honeymoon Package</a></li>
+                        <li><a href="Services.php">Corporate Trip</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -379,7 +379,7 @@ include 'db.php';
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Imperium Travel. All Rights Reserved.</p>
+                <p>&copy; <?= date('Y') ?> Imperium Travel. All Rights Reserved.</p>
                 <p>Designed for premium travelers.</p>
             </div>
         </div>

@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/about.css?v=<?= time() ?>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <style>
@@ -37,16 +37,15 @@
 
     <!-- hero -->
      <section class="hero">
-    <div class="hero-overlay"></div>
+    <form class="hero-search" method="get" action="destinasi.php">
+        <input type="text" name="search" placeholder="Search destinations...">
+        <button type="submit">Search</button>
+    </form>
     <div class="hero-content">
       <h1>About <em>Imperium</em> Travel</h1>
     </div>
-
   </section>
-     <div class="search-overlay">
-        <input type="text" placeholder="Search Here...">
-        <button>Search Services</button>
-    </div>
+
  
   <!-- STORY -->
   <section class="story">

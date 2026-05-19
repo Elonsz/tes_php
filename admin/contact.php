@@ -235,14 +235,14 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama</th>
-                        <th>HP</th>
+                        <th>Name</th>
+                        <th>Phone</th>
                         <th>Email</th>
-                        <th>Layanan</th>
-                        <th>Tanggal</th>
-                        <th>Destinasi</th>
-                        <th>Pesan</th>
-                        <th>Aksi</th>
+                        <th>Service</th>
+                        <th>Departure Date</th>
+                        <th>Destination</th>
+                        <th>Message</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -262,12 +262,12 @@
                         <td><?php echo $row['Destinasi Tujuan'] ?></td>
                         <td><?php echo substr($row['Pesan / Pertanyaan'], 0, 50) ?>...</td>
                         <td>
-                            <a href="contact_delete.php?nama=<?php echo urlencode($row['Nama Lengkap']) ?>" class="btn-delete" onclick="return confirm('Yakin ingin menghapus?')">Delete</a>
+                            <a href="contact_delete.php?nama=<?php echo urlencode($row['Nama Lengkap']) ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this message?')">Delete</a>
                         </td>
                     </tr>
                     <?php }} else { ?>
                         <tr>
-                            <td colspan="9" class="no-data">Belum ada pesan yang masuk.</td>
+                            <td colspan="9" class="no-data">No messages have been received yet.</td>
                         </tr>
                     <?php } ?>
                 </tbody>

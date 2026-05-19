@@ -1,3 +1,9 @@
+:root {
+  --white:     #FFFFFF;
+  --accent-dark: #1A1209;
+  --accent-hover: #33261a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -267,38 +273,59 @@ header {
   color: #333;
 }
 
-.search-overlay {
-  display: flex;
+.hero-search {
   position: absolute;
-  top: 80px;
+  top: 90px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
+  display: flex;
+  align-items: stretch;
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  width: min(520px, 90vw);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  z-index: 2;
 }
 
-.search-overlay input {
-  height: 32px;
-  width: 400px;
-  border: 2px solid #6B4226;
-  text-align: center;
-}
-
-.search-overlay input:focus {
+.hero-search input {
+  flex: 1;
+  border: none;
   outline: none;
+  padding: 13px 18px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: #000000;
+  background: transparent;
 }
 
-.search-overlay button {
-  color: #B8A7A7;
-  background-color: #1A1209;
-  border: 6px;
-  width: 130px;
-  cursor: grab;
+.hero-search input::placeholder {
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 12px;
 }
 
-.search-overlay button:hover {
-  background-color: #482d1b;
-  transition: 0.3s;
+.hero-search button {
+  background: var(--accent-dark);
+  color: #ffffff; /* Putih bersih agar kontras */
+  border: none;
+  padding: 13px 22px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  white-space: nowrap;
+  transition: all 0.3s ease; /* Transisi lebih halus */
+  text-transform: uppercase; /* Agar gaya tombol lebih tegas */
+  letter-spacing: 0.5px;
 }
+
+.hero-search button:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 4px 15px rgba(26, 18, 9, 0.3); /* Shadow halus dengan warna senada */
+}
+
 
 .stats .container ul {
   display: flex;
