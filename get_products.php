@@ -59,13 +59,13 @@ while ($f = $res_feat->fetch_assoc()) { $featured_items[] = $f; }
     <?php if (count($featured_items) > 0): ?>
         <div class="featured-grid">
             <?php foreach ($featured_items as $i => $f): ?>
-                <a href="detail.php?id=<?= $f['product_id'] ?>" class="feat-card <?= ($i === 0) ? 'feat-large' : 'feat-small' ?>" data-name="<?= strtolower(htmlspecialchars($f['product_name'])) ?>">
+                <div class="feat-card <?= ($i === 0) ? 'feat-large' : 'feat-small' ?>" data-name="<?= strtolower(htmlspecialchars($f['product_name'])) ?>">
                     <img src="produk/<?= htmlspecialchars($f['product_image']) ?>" alt="<?= htmlspecialchars($f['product_name']) ?>">
                     <div class="feat-overlay"></div>
                     <div class="feat-info">
                         <h3><?= htmlspecialchars($f['product_name']) ?></h3>
                     </div>
-                </a>
+                </div>
             <?php endforeach; ?>
         </div>
     <?php else: ?>

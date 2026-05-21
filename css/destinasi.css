@@ -91,9 +91,8 @@ header {
   transition: color 0.25s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--accent);
+.nav-links a:hover{
+  color:#C8793A;
 }
 
 .header-right {
@@ -116,7 +115,7 @@ header {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../img/des-bg.png') center/cover no-repeat;
+  background: url('../img/bg-des.png') center/cover no-repeat;
   transform: scale(1.04);
   transition: transform 8s ease;
 }

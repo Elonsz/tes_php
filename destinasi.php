@@ -45,9 +45,9 @@ if ($cat_query) {
         </nav>
     </div>
 </header>
-
 <section class="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg">
+    </div>
     <div class="hero-overlay"></div>
     <form class="hero-search" method="get" action="destinasi.php">
         <input type="hidden" name="cat" value="<?= $active_cat ?>">
@@ -137,8 +137,5 @@ if ($cat_query) {
             </div>
         </div>
     </footer>
- 
-
-
 </body>
 </html>

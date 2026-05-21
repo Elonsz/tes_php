@@ -251,7 +251,7 @@ include 'db.php';
                 if(mysqli_num_rows($produk) > 0){
                     while($p = mysqli_fetch_array($produk)){
                 ?>
-                <a href="destination.php?id=<?php echo $p['product_id'] ?>" class="tour-card">
+                <a href="contact.php" class="tour-card">
                     <div class="tour-img">
                         <img src="produk/<?php echo $p['product_image'] ?>" alt="<?php echo $p['product_name'] ?>">
                     </div>
