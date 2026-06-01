@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +20,7 @@
     <div class="header-wrapper">
         <div class="header-left">
             <a href="index.php" class="logo-link">
-                <img src="Img/logo.png" alt="Logo">
+                <img src="img/logo.png" alt="Logo">
                 <span class="logo-text">Imperium Travel</span>
             </a>
         </div>
@@ -32,6 +33,18 @@
             <a href="contact.php">Contact</a>
         </nav>
         <div class="header-right">
+            <?php if(isset($_SESSION['status_login']) && $_SESSION['status_login'] == true): ?>
+                <div class="admin-profile-card">
+                    <a href="admin/dashboard.php" class="btn-home-admin">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </a>
+                    <span class="admin-name"><?php echo $_SESSION['admin_name']; ?></span>
+                    <div class="admin-avatar-small"><?php echo substr($_SESSION['admin_name'], 0, 1); ?></div>
+                </div>
+            <?php else: ?>
+                <a href="login.php" class="btn-login">Login</a>
+            <?php endif; ?>
+        </div>
     </div>
 </header>
 
@@ -219,7 +232,7 @@
   <section class="cta">
     <h2>Ready to Start Your Adventure?</h2>
     <p>Trust your dream journey to us — and let us turn it into a lifetime memory.</p>
-    <a href="#" class="cta-btn">Contact Us</a>
+    <a href="contact.php" class="cta-btn">Contact Us</a>
   </section>
 
     <!-- Footer -->
@@ -230,11 +243,11 @@
                     <h3 style="font-style: italic;">Imperium <span style="color: #E07B39;">Travel</span></h3>
                     <p>Let us take you to explore the beauty of the world with a premium, safe, and unforgettable travel experience.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -250,10 +263,10 @@
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Private Tour</a></li>
-                        <li><a href="#">Group Tour</a></li>
-                        <li><a href="#">Honeymoon Package</a></li>
-                        <li><a href="#">Corporate Trip</a></li>
+                        <li><a href="services.php">Private Tour</a></li>
+                        <li><a href="services.php">Group Tour</a></li>
+                        <li><a href="services.php">Honeymoon Package</a></li>
+                        <li><a href="services.php">Corporate Trip</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

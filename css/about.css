@@ -120,6 +120,67 @@ header {
   color: #E07B39;
 }
 
+.btn-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6B4226;
+  color: #fff;
+  height: 42px;
+  width: 90px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-login:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  color: #0a0a0a;
+  text-decoration: none;
+  border: 1px solid #6B4226;
+}
+
+.admin-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8f9fa;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1px solid #e1e1e1;
+}
+
+.btn-home-admin {
+  display: flex;
+  align-items: center;
+  color: #6B4226;
+  padding-right: 10px;
+  border-right: 1px solid #ddd;
+  text-decoration: none;
+}
+
+.admin-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.admin-avatar-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: #6B4226;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 /* Hero Section */
 .hero-content {
   display: flex;

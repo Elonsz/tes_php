@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'db.php';
 
 $active_cat = isset($_GET['cat']) ? (int)$_GET['cat'] : 0;
@@ -29,20 +30,34 @@ if ($cat_query) {
 <body>
 
 <header>
-    <div class="header-wrapper">
+<div class="header-wrapper">
         <div class="header-left">
             <a href="index.php" class="logo-link">
                 <img src="img/logo.png" alt="Logo">
-                <span class="logo-text">Imperium<span class="logo-accent">Travel</span></span>
+                <span class="logo-text">Imperium Travel</span>
             </a>
         </div>
+
         <nav class="nav-links">
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
-            <a href="destinasi.php" class="active">Destinations</a>
+            <a href="destinasi.php">Destination</a>
             <a href="services.php">Services</a>
             <a href="contact.php">Contact</a>
         </nav>
+        <div class="header-right">
+            <?php if(isset($_SESSION['status_login']) && $_SESSION['status_login'] == true): ?>
+                <div class="admin-profile-card">
+                    <a href="admin/dashboard.php" class="btn-home-admin">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </a>
+                    <span class="admin-name"><?php echo $_SESSION['admin_name']; ?></span>
+                    <div class="admin-avatar-small"><?php echo substr($_SESSION['admin_name'], 0, 1); ?></div>
+                </div>
+            <?php else: ?>
+                <a href="login.php" class="btn-login">Login</a>
+            <?php endif; ?>
+        </div>
     </div>
 </header>
 <section class="hero">
@@ -96,11 +111,11 @@ if ($cat_query) {
                     <h3 style="font-style: italic;">Imperium <span style="color: #E07B39;">Travel</span></h3>
                     <p>Let us take you to explore the beauty of the world with a premium, safe, and unforgettable travel experience.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
